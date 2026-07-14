@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #222;
+    line-height: 1.6;
+}
+
+/*整体容器*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/*头部Header*/
+header {
+    background-color: #4a6fa5;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/*导航栏*/
+nav {
+    background-color: #6089c2;
+    padding: 15px;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    justify-content: center;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 6px;
+}
+nav a:hover {
+    background-color: #3a5a80;
+    transition: 0.3s;
+}
+
+/*主体：左右侧边栏 + 中间内容*/
+.main-wrap {
+    display: flex;
+    flex: 1;
+    gap: 20px;
+    padding: 20px;
+}
+
+/*左侧边栏*/
+.sidebar-left {
+    width: 20%;
+    background: #e9eff7;
+    padding: 15px;
+    border-radius: 8px;
+}
+.sidebar-left h3 {
+    margin-bottom: 12px;
+    color: #334;
+}
+.sidebar-left ul {
+    list-style: none;
+}
+.sidebar-left li {
+    margin: 10px 0;
+}
+.sidebar-left a {
+    color: #2b5797;
+}
+
+/*中间内容区域*/
+.content {
+    width: 60%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px #ddd;
+}
+.content h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+.content img {
+    max-width: 100%;
+    margin: 15px 0;
+    border-radius: 6px;
+}
+
+/*右侧边栏（联系表单）*/
+.sidebar-right {
+    width: 20%;
+    background: #e9eff7;
+    padding: 15px;
+    border-radius: 8px;
+}
+.sidebar-right h3 {
+    margin-bottom: 12px;
+}
+form input, form textarea {
+    width: 100%;
+    margin: 6px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+form button {
+    background: #4a6fa5;
+    color: white;
+    border: none;
+    padding: 9px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+form button:hover {
+    background: #3a5a80;
+}
+
+/*作品集表格样式*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background: #d7e2f0;
+}
+tr:nth-child(even) {
+    background: #f3f7fc;
+}
+
+/*BMI计算器模块*/
+.bmi-box {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f0f5fc;
+    border-radius: 8px;
+}
+.bmi-box input {
+    width: 70%;
+    margin: 8px 0;
+}
+#result {
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/*页脚Footer*/
+footer {
+    background-color: #4a6fa5;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+}
+footer a {
+    color: #e0ecff;
+}
+
+/*手机端自适应*/
+@media (max-width:768px) {
+    .main-wrap {
+        flex-direction: column;
+    }
+    .sidebar-left, .content, .sidebar-right {
+        width: 100%;
+    }
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        gap:10px;
+    }
+}

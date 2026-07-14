@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia | BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Personal Website</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="trivia.html">Trivia</a></li>
+            </ul>
+        </nav>
+        <div class="main-wrap">
+            <aside class="sidebar-left">
+                <h3>Useful Study Links</h3>
+                <ul>
+                    <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
+                    <li><a href="https://github.com" target="_blank">GitHub</a></li>
+                    <li><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a></li>
+                    <li><a href="https://codepen.io" target="_blank">CodePen</a></li>
+                </ul>
+            </aside>
+            <main class="content">
+                <h2>BMI Calculator Trivia</h2>
+                <p>Enter your height and weight to calculate your BMI and body category.</p>
+                <div class="bmi-box">
+                    <label>Height (cm): </label>
+                    <input type="number" id="height" placeholder="e.g. 170">
+                    <br>
+                    <label>Weight (kg): </label>
+                    <input type="number" id="weight" placeholder="e.g. 62">
+                    <br>
+                    <button onclick="calculateBMI()">Calculate BMI</button>
+                    <div id="result"></div>
+                </div>
+            </main>
+            <aside class="sidebar-right">
+                <h3>Contact Me</h3>
+                <form onsubmit="return checkForm()">
+                    <label>Name</label>
+                    <input type="text" id="name" placeholder="Your name">
+                    <label>Email</label>
+                    <input type="email" id="email" placeholder="your@email.com">
+                    <label>Message</label>
+                    <textarea rows="4" placeholder="Write your message"></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </aside>
+        </div>
+        <footer>
+            <p>Created in 2026 | External Links: <a href="https://github.com" target="_blank">GitHub</a></p>
+        </footer>
+    </div>
+    <!--只有这个页面引入js文件-->
+    <script src="script.js"></script>
+</body>
+</html>
